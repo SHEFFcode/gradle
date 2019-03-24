@@ -1,5 +1,14 @@
+import java.text.*
+
+
 defaultTasks 'hello'
 
 task ('hello').doLast {
   println "Hello world"
+}
+
+task ('printDate').doLast {
+  SimpleDateFormat sdf = new SimpleDateFormat("yyy-MM-dd'T'HH:mm:ss'Z'")
+  sdf.setTimeZone(TimeZone.getTimeZone("UTC"))
+  println "Hello world " + sdf.format(new Date())
 }
