@@ -16,3 +16,15 @@ task ('printDate').doLast {
 [1, 2, 3].each {
   println it
 }
+
+class Person {
+  String name = "Fred"
+
+  Closure nameSayer = {
+    println name
+  }
+}
+
+def p1 = new Person()
+
+p1.nameSayer() // Closures keep a refence to the place they've been defined.  They keep reference to the context rather than the values.
