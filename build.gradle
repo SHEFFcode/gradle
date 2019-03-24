@@ -34,3 +34,5 @@ logger.info "Hello!"
 apply {
   println "Hello again!!!"
 }
+
+logger.info "Gradle version is ${gradle.gradleVersion}"
