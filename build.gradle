@@ -12,3 +12,7 @@ task ('printDate').doLast {
   sdf.setTimeZone(TimeZone.getTimeZone("UTC"))
   println "Hello world " + sdf.format(new Date())
 }
+
+[1, 2, 3].each {
+  println it
+}
